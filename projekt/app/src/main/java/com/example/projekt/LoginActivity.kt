@@ -27,7 +27,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun goToForgotPassword(view: View){
-        startActivity(Intent(this,RegisterActivity::class.java));
+        startActivity(Intent(this,ForgotPassActivity::class.java));
     }
     fun emailPasswordValidity(email : EditText, password: EditText){
         val emailstring = email.text.toString();
