@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/darkgray"
+    android:background="@android:color/darker_gray"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout3"
+        android:id="@+id/constraintLayout4"
         android:layout_width="419dp"
         android:layout_height="75dp"
         android:background="@color/gray"
@@ -17,19 +17,19 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView18"
+            android:id="@+id/textView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="68dp"
-            android:layout_marginTop="16dp"
-            android:text="Settings"
-            android:textColor="@color/white"
-            android:textSize="30sp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:text="Bazaar"
+            android:textColor="@color/teal_200"
+            android:textSize="40sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/img7"
+            android:id="@+id/img19"
             android:layout_width="47dp"
             android:layout_height="39dp"
             android:layout_marginTop="20dp"
@@ -40,17 +40,15 @@
             app:srcCompat="@drawable/ic_baseline_account_circle_24" />
 
         <ImageView
-            android:id="@+id/img6"
+            android:id="@+id/img18"
             android:layout_width="47dp"
             android:layout_height="39dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:background="@color/gray"
-            android:onClick="goBackToMain"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/img19"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />
-
+            app:srcCompat="@drawable/ic_baseline_search_24" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -69,12 +67,11 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <ImageView
-                android:id="@+id/img8"
+                android:id="@+id/img20"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginBottom="24dp"
                 android:background="@android:color/darker_gray"
-                android:onClick="goToTimeline"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
@@ -82,10 +79,9 @@
                 app:srcCompat="@drawable/ic_home_black_24dp" />
 
             <TextView
-                android:id="@+id/textView19"
+                android:id="@+id/textView15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="goToTimeline"
                 android:text="Timeline"
                 android:textColor="@android:color/darker_gray"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -101,12 +97,11 @@
             app:layout_constraintStart_toEndOf="@+id/constraintLayout2">
 
             <ImageView
-                android:id="@+id/img9"
+                android:id="@+id/img21"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginBottom="24dp"
                 android:background="@android:color/darker_gray"
-                android:onClick="goToMarket"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
@@ -114,10 +109,9 @@
                 app:srcCompat="@drawable/ic_baseline_shopping_cart_24" />
 
             <TextView
-                android:id="@+id/textView20"
+                android:id="@+id/textView16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="goToMarket"
                 android:text="My market"
                 android:textColor="@android:color/darker_gray"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -133,12 +127,11 @@
             app:layout_constraintEnd_toEndOf="parent">
 
             <ImageView
-                android:id="@+id/img10"
+                android:id="@+id/img22"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginBottom="24dp"
                 android:background="@android:color/darker_gray"
-                android:onClick="goToFares"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
@@ -146,10 +139,9 @@
                 app:srcCompat="@drawable/ic_baseline_list_alt_24" />
 
             <TextView
-                android:id="@+id/textView21"
+                android:id="@+id/textView17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="goToFares"
                 android:text="My fares"
                 android:textColor="@android:color/darker_gray"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -159,90 +151,15 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/TextViewName"
-        android:layout_width="242dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="80dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
-
-    <EditText
-        android:id="@+id/editTextSettingsEmail"
-        android:layout_width="242dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/border"
-        android:ems="10"
-        android:hint="Email Address"
-        android:inputType="textEmailAddress"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextViewName" />
-
-    <EditText
-        android:id="@+id/editTextSettingsUsername"
-        android:layout_width="242dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/border"
-        android:ems="10"
-        android:hint="Username"
-        android:inputType="textPersonName"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSettingsEmail" />
-
-    <EditText
-        android:id="@+id/editTextSettingsPhonenumber"
-        android:layout_width="242dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/border"
-        android:ems="10"
-        android:hint="Phone Number"
-        android:inputType="phone"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSettingsUsername" />
-
-    <EditText
-        android:id="@+id/editTextSettingsPassword"
-        android:layout_width="242dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/border"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSettingsPhonenumber" />
-
-    <Button
-        android:id="@+id/PublishSettingsButton"
-        android:layout_width="263dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="36dp"
-        android:backgroundTint="@color/teal_200"
-        android:text="Publish"
+        android:id="@+id/textViewFairCounter"
+        android:layout_width="103dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSettingsPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

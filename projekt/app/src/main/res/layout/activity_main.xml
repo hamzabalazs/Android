@@ -28,7 +28,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/img7"
+            android:id="@+id/img2"
             android:layout_width="47dp"
             android:layout_height="39dp"
             android:layout_marginTop="20dp"
@@ -40,13 +40,13 @@
             app:srcCompat="@drawable/ic_baseline_account_circle_24" />
 
         <ImageView
-            android:id="@+id/img6"
+            android:id="@+id/img"
             android:layout_width="47dp"
             android:layout_height="39dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="16dp"
             android:background="@color/white"
-            app:layout_constraintEnd_toStartOf="@+id/img7"
+            app:layout_constraintEnd_toStartOf="@+id/img2"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_baseline_search_24" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -67,7 +67,7 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <ImageView
-                android:id="@+id/ddd"
+                android:id="@+id/img3"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginBottom="24dp"
