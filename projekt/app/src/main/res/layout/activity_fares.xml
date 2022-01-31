@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/darker_gray"
-    tools:context=".TimeLineActivity">
+    android:background="@color/darkgray"
+    tools:context=".FaresActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout4"
         android:layout_width="419dp"
         android:layout_height="75dp"
         android:background="@color/gray"
@@ -20,16 +19,16 @@
             android:id="@+id/textView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="12dp"
-            android:text="Bazaar"
-            android:textColor="@color/teal_200"
-            android:textSize="40sp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="16dp"
+            android:text="My Fares"
+            android:textColor="@color/white"
+            android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/img19"
+            android:id="@+id/img24"
             android:layout_width="47dp"
             android:layout_height="39dp"
             android:layout_marginTop="20dp"
@@ -40,15 +39,25 @@
             app:srcCompat="@drawable/ic_baseline_account_circle_24" />
 
         <ImageView
-            android:id="@+id/img18"
+            android:id="@+id/img23"
             android:layout_width="47dp"
             android:layout_height="39dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="16dp"
             android:background="@color/white"
-            app:layout_constraintEnd_toStartOf="@+id/img19"
+            app:layout_constraintEnd_toStartOf="@+id/img24"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_baseline_search_24" />
+
+        <ImageView
+            android:id="@+id/img28"
+            android:layout_width="47dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -67,7 +76,7 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <ImageView
-                android:id="@+id/img20"
+                android:id="@+id/img25"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginBottom="24dp"
@@ -97,7 +106,7 @@
             app:layout_constraintStart_toEndOf="@+id/constraintLayout2">
 
             <ImageView
-                android:id="@+id/img21"
+                android:id="@+id/img26"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginBottom="24dp"
@@ -127,7 +136,7 @@
             app:layout_constraintEnd_toEndOf="parent">
 
             <ImageView
-                android:id="@+id/img22"
+                android:id="@+id/img27"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginBottom="24dp"
@@ -149,17 +158,5 @@
                 app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/textViewFairCounter"
-        android:layout_width="103dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

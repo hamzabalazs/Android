@@ -5,10 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 
-class MainActivity : AppCompatActivity() {
+class FaresActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_fares)
     }
 
     fun goToTimeline(view: View){
@@ -22,11 +22,4 @@ class MainActivity : AppCompatActivity() {
     fun goToMarket(view: View){
         startActivity(Intent(this,MarketActivity::class.java))
     }
-
-    fun goToFares(view: View){
-        startActivity(Intent(this,FaresActivity::class.java))
-    }
-
-
-
 }
