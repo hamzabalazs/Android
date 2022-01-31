@@ -22,4 +22,8 @@ class FaresActivity : AppCompatActivity() {
     fun goToMarket(view: View){
         startActivity(Intent(this,MarketActivity::class.java))
     }
+
+    fun goBackToMain(view: View){
+        startActivity(Intent(this,MainActivity::class.java))
+    }
 }

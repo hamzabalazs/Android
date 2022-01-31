@@ -11,6 +11,10 @@ class MarketActivity : AppCompatActivity() {
         setContentView(R.layout.activity_market)
     }
 
+    fun goToSettings(view: View){
+        startActivity(Intent(this,SettingsActivity::class.java))
+    }
+
     fun goToTimeline(view: View){
         startActivity(Intent(this,TimeLineActivity::class.java))
     }
