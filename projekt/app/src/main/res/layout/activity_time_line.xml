@@ -168,4 +168,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewProductsTimeline"
+        android:layout_width="391dp"
+        android:layout_height="521dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="149dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
