@@ -1,20 +1,22 @@
 package com.example.projekt
 
 import retrofit2.Response
-import okhttp3.MultipartBody
-import okhttp3.RequestBody
+import com.example.projekt.Constants
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.POST
 interface MarketApi {
 
-    @POST("/user/register")
-    suspend fun register(@Body request: RegisterRequest): Response<RegisterResponse>
+    @POST(Constants.REGISTER_URL)
+    suspend fun register(@Body request: RegisterRequest) : RegisterResponse
 
-    @POST("/user/login")
-    suspend fun login(@Body request: LoginRequest): Response<LoginResponse>
+    @POST(Constants.LOGIN_URL)
+    suspend fun login(@Body request: LoginRequest) : LoginResponse
 
-    @GET("/products")
-    suspend fun getProducts(@Header("token") token: String, @Header("skip") skip: Int, @Header("filter") filter: String): Response<ProductResponse>
+    @GET(Constants.GET_PRODUCTS_URL)
+    suspend fun getProducts(@Header ("token") token: String, @Header ("limit") limit : Int) : ProductResponse
+
+    @GET(Constants.GET_ORDERS_URL)
+    suspend fun getOrders(@Header ("token") token: String, @Header ("limit") limit : Int) : OrderResponse
 }

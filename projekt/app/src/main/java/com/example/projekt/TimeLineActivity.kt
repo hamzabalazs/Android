@@ -15,37 +15,16 @@ const val TAG = "TimeLineActivity"
 
 class TimeLineActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityTimeLineBinding
 
-    private lateinit var productAdapter: ProductAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityTimeLineBinding.inflate(layoutInflater)
+
         setContentView(R.layout.activity_time_line)
-        setupRecyclerView()
-
-        lifecycleScope.launchWhenCreated {
-            val response = try{
-                RetrofitInstance.api.getProducts(MyApplication.token,0,"")
-
-            } catch(e: IOException){
-                Log.e(TAG, "IOException")
-                return@launchWhenCreated
-            } catch(e: HttpException){
-                Log.e(TAG,"HttpException")
-                return@launchWhenCreated
-            }
-
-        }
-    }
-
-    private fun setupRecyclerView() = binding.recyclerViewProductsTimeline.apply{
-        productAdapter = ProductAdapter()
-        adapter = productAdapter
-        layoutManager = LinearLayoutManager(this@TimeLineActivity)
 
     }
+
+
 
     fun goToSettings(view: View){
         startActivity(Intent(this,SettingsActivity::class.java))
