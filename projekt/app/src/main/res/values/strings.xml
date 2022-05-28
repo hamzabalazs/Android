@@ -4,4 +4,6 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="username_sharedpreferences_string_resource">username</string>
+    <string name="password_sharedpreferences_string_resource">password</string>
 </resources>
