@@ -1,67 +1,45 @@
 package com.example.projekt
 
-import android.content.Context
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.AttributeSet
-import android.util.Log
 import android.view.View
-import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import java.lang.Exception
+import com.google.android.material.navigation.NavigationBarView
 
 class MainActivity : AppCompatActivity() {
-    lateinit var timelineViewModel: TimelineViewModel
-    private lateinit var list : List<Product>
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter : TimelineDataAdapter
-    private lateinit var username : String
+
+    private lateinit var bottomNavigation : BottomNavigationView
+    private lateinit var navController : NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        bottomNavigation = findViewById(R.id.bottom_navigation)
+        navController = Navigation.findNavController(this,R.id.nav_host_fragment)
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            if(destination.id == R.id.loginFragment || destination.id == R.id.registerFragment || destination.id == R.id.itemDetailsFragment || destination.id == R.id.myProfileFragment || destination.id == R.id.resetPasswordFragment) {
 
-        val sharedPref = getPreferences(Context.MODE_PRIVATE)
+                bottomNavigation.visibility = View.GONE
+            } else {
 
-        val factory = TimelineViewModelFactory(Repository(), sharedPref!!)
-        timelineViewModel = ViewModelProvider(this,factory).get(TimelineViewModel::class.java)
+                bottomNavigation.visibility = View.VISIBLE
+            }
+        }
 
-        recyclerView = findViewById(R.id.recycler_view_main)
-        setupRecyclerView()
+        bottomNavigation.setOnItemSelectedListener (NavigationBarView.OnItemSelectedListener { menuItem ->
+            bottomNavigation.menu.getItem(0).isChecked = true
 
+            when(menuItem.itemId){
+                R.id.myMarketMenuItem -> Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.myMarketFragment)
+                R.id.myFaresMenuItem -> Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.myFaresFragment)
+                R.id.timelineMenuItem -> Navigation.findNavController(this,R.id.nav_host_fragment).navigate(R.id.timelineFragment)
+            }
+
+            true
+        })
     }
-
-
-
-    private fun setupRecyclerView(){
-        val sharedPref = getPreferences(Context.MODE_PRIVATE)
-        username = sharedPref?.getString(getString(R.string.username_sharedpreferences_string_resource), "").toString()
-        adapter = TimelineDataAdapter(username,list)
-        recyclerView.adapter = adapter
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.setHasFixedSize(true)
-    }
-
-    fun goToTimeline(view: View){
-        startActivity(Intent(this,TimeLineActivity::class.java))
-    }
-
-    fun goToSettings(view: View){
-        startActivity(Intent(this,SettingsActivity::class.java))
-    }
-
-    fun goToMarket(view: View){
-        startActivity(Intent(this,MarketActivity::class.java))
-    }
-
-    fun goToFares(view: View){
-        startActivity(Intent(this,FaresActivity::class.java))
-    }
-
-
 
 }

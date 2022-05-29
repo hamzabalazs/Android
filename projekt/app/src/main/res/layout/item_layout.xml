@@ -14,7 +14,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/grayer">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -24,7 +25,7 @@
             android:layout_marginTop="15dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            />
+            app:srcCompat="@mipmap/ic_product2_foreground" />
 
         <TextView
             android:id="@+id/timelineItemPriceTV"
@@ -32,7 +33,26 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:text="Price"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timelineItemTitleTV" />
+
+        <Button
+            android:id="@+id/timelineOrderButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="25dp"
+            android:backgroundTint="@color/teal_200"
+            android:capitalize="characters"
+            android:text="Order now"
+            android:textAllCaps="false"
+            app:cornerRadius="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/timelineItemTitleTV" />
 
@@ -42,6 +62,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="title"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
             app:layout_constraintTop_toBottomOf="@+id/timelineItemOwnerTV" />
@@ -52,6 +74,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:text="owner"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
@@ -61,9 +85,12 @@
             android:id="@+id/timelineAvailabilityTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:backgroundTint="@color/teal_200"
             android:text="TextView"
-            tools:layout_editor_absoluteX="164dp"
-            tools:layout_editor_absoluteY="107dp" />
+            app:layout_constraintEnd_toEndOf="@+id/timelineOrderButton"
+            app:layout_constraintStart_toStartOf="@+id/timelineOrderButton"
+            app:layout_constraintTop_toTopOf="@+id/timelineOrderButton" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>
